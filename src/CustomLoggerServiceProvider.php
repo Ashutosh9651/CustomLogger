@@ -10,7 +10,7 @@ class CustomLoggerServiceProvider extends ServiceProvider
 {
     public function register()
     {
-
+        //  print_r(__DIR__ . '/../../../../config/logging.php');die;
         $this->mergeConfigFrom(__DIR__ . '/../../../../config/logging.php', 'logging');
     }
 
@@ -18,7 +18,7 @@ class CustomLoggerServiceProvider extends ServiceProvider
     {
         // Publish configuration file
         $this->publishes([
-            __DIR__.'/../../config/logging.php' => config_path('logging.php'),
+            __DIR__.'/../../../../config/logging.php' => config_path('logging.php'),
         ], 'config');
 
         // Register middleware
