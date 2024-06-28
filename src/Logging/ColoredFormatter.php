@@ -1,6 +1,6 @@
 <?php
 
-namespace CustomLogger\Logging;
+namespace CustomLogger\Logger\Logging;
 
 use Monolog\Formatter\LineFormatter;
 use Monolog\Logger;

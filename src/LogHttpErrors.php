@@ -1,6 +1,6 @@
 <?php
 
-namespace CustomLogger;
+namespace CustomLogger\Logger;
 
 use Closure;
 use Illuminate\Http\Request;
@@ -15,8 +15,8 @@ class LogHttpErrors
     public function handle(Request $request, Closure $next)
 {
     try {
+    
         $response = $next($request);
-        
         if ($response instanceof \Illuminate\Http\JsonResponse) {
             $data = $response->getData(true); // Get the data as an associative array
             if (isset($data['status']) && $data['status'] == 'failed') {
@@ -30,6 +30,7 @@ class LogHttpErrors
 
     // Check response status code for logging
     if ($response->getStatusCode() >= 400) {
+        
         $this->logResponseError($response);
     }
 

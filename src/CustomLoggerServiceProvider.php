@@ -1,16 +1,17 @@
 <?php
 
-namespace CustomLogger;
+namespace CustomLogger\Logger;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Contracts\Http\Kernel;
-use CustomLogger\Middleware\LogHttpErrors;
+use CustomLogger\Logger\LogHttpErrors;
 
 class CustomLoggerServiceProvider extends ServiceProvider
 {
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__.'/../../config/logging.php', 'logging');
+
+        $this->mergeConfigFrom(__DIR__ . '/../../../../config/logging.php', 'logging');
     }
 
     public function boot()

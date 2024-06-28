@@ -1,6 +1,6 @@
 <?php
 
-namespace CustomLogger\Logging;
+namespace CustomLogger\Logger\Logging;
 
 use Monolog\Logger;
 use Monolog\Handler\StreamHandler;

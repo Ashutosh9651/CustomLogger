@@ -1,6 +1,6 @@
 <?php
 
-namespace CustomLogger\Exceptions;
+namespace CustomLogger\Logger\Exceptions;
 
 use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
