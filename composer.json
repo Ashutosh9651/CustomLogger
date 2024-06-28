@@ -1,0 +1,27 @@
+{
+    "name": "customlogger/logger",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "ashutosh",
+            "email": "ashutosh.mishra@unicodesystems.co.in"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Seeders\\": "database/seeders/",
+            "CustomLogger\\Logger\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/",
+            "CustomLogger\\Logger\\": "src/"
+        }
+    }
+}
